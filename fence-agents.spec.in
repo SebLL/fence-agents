@@ -52,6 +52,7 @@ fence-agents-hds-cb \\
 fence-agents-heuristics-ping \\
 fence-agents-hpblade \\
 fence-agents-ibmblade \\
+fence-agents-ibmz \\
 fence-agents-ifmib \\
 fence-agents-ilo-moonshot \\
 fence-agents-ilo-mp \\
@@ -561,6 +562,18 @@ via the SNMP protocol.
 %files ibmblade
 %{_sbindir}/fence_ibmblade
 %{_mandir}/man8/fence_ibmblade.8*
+
+%package ibmz
+License: GPLv2+ and LGPLv2+
+Summary: Fence agent for IBM Z and LinuxONE
+Requires: net-snmp-utils
+Requires: fence-agents-common = %{version}-%{release}
+BuildArch: s390x
+%description ibmz
+Fence agent for IBM Z and LinuxONE devices that are accessed
+via the SNMP protocol.
+%files ibmz
+%{_sbindir}/fence_ibmz
 
 %package ifmib
 License: GPLv2+ and LGPLv2+
